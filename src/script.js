@@ -42,7 +42,7 @@ players.addEventListener("keypress", function (event) {
 
 //start btn Function
 start.addEventListener("click", function () {
-    if (parseInt(players.value) < 1 || parseInt(players.value) > 5) {
+    if (parseInt(players.value) < 1 || parseInt(players.value) > 5 || players.value == "") {
         StartUpTealToRed();
     } else {
         current = 1;
