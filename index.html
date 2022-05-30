@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>終極密碼多人版</title>
+        <link href="/dist/output.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div
+            class="flex flex-row justify-center h-screen bg-zinc-800 text-slate-50"
+        >
+            <div
+                class="flex bg-zinc-700 w-3/4 h-1/2 self-center content-center rounded-3xl shadow-xl"
+            >
+                <!--Player-->
+                <div class="flex w-1/2 content-center justify-center">
+                    <div class="w-2/3 justify-self-center self-center text-center">
+                        <img
+                            id="avatar"
+                            src="/assets/p1.jpg"
+                            class="w-64 rounded-full"
+                            alt=""
+                        />
+                    </div>
+                </div>
+
+                <!--StartUp-->
+                <div id="StartUp" class="flex w-1/2 content-center">
+                    <div class="flex-none self-center">
+                        <h1 class="text-4xl">終極密碼多人版</h1>
+                        <h2 class="text-lg text-gray-300 mt-2">
+                            #可支持 0~5 人遊玩
+                        </h2>
+                        <form class="w-full max-w-sm mt-6">
+                            <label
+                                id="playerLabel"
+                                class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2"
+                                for="players"
+                            >
+                                請輸入遊玩人數 (1~5):
+                            </label>
+                            <div
+                                id="playerWrap"
+                                class="flex items-center border-b border-teal-500 pb-2"
+                            >
+                                <input
+                                    class="appearance-none bg-transparent border-none w-full text-gray-400 mr-3 py-1 px-2 leading-tight focus:outline-none caret-gray-300"
+                                    type="text"
+                                    id="players"
+                                />
+                                <button
+                                    class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+                                    type="button"
+                                    id="start"
+                                >
+                                    開始遊玩
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Playing-->
+                <div id="Playing" class="hidden w-1/2 content-center">
+                    <div class="flex-none self-center">
+                        <h2 id="PlayingPlayer" class="text-lg text-gray-300">#Player1</h2>
+                        <h1 id="range" class="text-4xl mt-2">範圍：0 - 100</h1>
+                        <form class="w-full max-w-sm mt-6">
+                            <label
+                                id = "ansLabel"
+                                class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2"
+                                for="yourAns"
+                            >
+                                你的答案:
+                            </label>
+                            <div
+                                id="ansWrap"
+                                class="flex items-center border-b border-teal-500 pb-2"
+                            >
+                                <input
+                                    class="appearance-none bg-transparent border-none w-full text-gray-400 mr-3 py-1 px-2 leading-tight focus:outline-none caret-gray-300"
+                                    type="text"
+                                    id="yourAns"
+                                />
+                                <button
+                                    class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+                                    type="button"
+                                    id="sendAns"
+                                >
+                                    送出答案
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--EndGame-->
+                <div id="EndGame" class="hidden w-1/2 content-center">
+                    <div class="flex-none self-center">
+                        <h2 id="EndPlayer" class="text-lg text-gray-300">#Player1</h2>
+                        <h1 class="text-6xl mt-2">你猜對了！</h1>
+                        <form class="w-full max-w-sm mt-6">
+                            <button
+                                class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-2 px-4 rounded"
+                                type="button"
+                                id="playAgain"
+                            >
+                                再玩一次
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/src/script.js"></script>
+    </body>
+</html>
