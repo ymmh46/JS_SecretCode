@@ -51,8 +51,9 @@ start.addEventListener("click", function () {
         max = 100;
         StartUp.replace("flex", "hidden");
         Playing.replace("hidden", "flex");
-        console.log("Players:" + players.value);
-        console.log("correctAns:" + correctAns);
+        range.innerText = "範圍：" + min + " - " + max;
+        PlayingPlayer.innerText = "#Player" + current;
+        avatar.src = "/assets/p" + current + ".jpg";
     }
 });
 
